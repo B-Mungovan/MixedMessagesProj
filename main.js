@@ -28,7 +28,7 @@ const collectiveOutputs = {
 
   let personalMessage = []
 
-  for (let prop in collectiveWisdom){
+  for (let prop in collectiveOutputs){
     let optionIndx = generateRandomNumber(collectiveOutputs[prop.length])
 
     switch(prop) {
