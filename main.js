@@ -28,4 +28,23 @@ const collectiveOutputs = {
 
   let personalMessage = []
 
+  for (let prop in collectiveWisdom){
+    let optionIndx = generateRandomNumber(collectiveOutputs[prop.length])
+
+    switch(prop) {
+        case 'motivational':
+            personalMessage.push(`your motivational message for today is "${collectiveOutputs[prop][optionIndx]}".`)
+            break
+        case "inspirational":
+            personalMessage.push(`your motivational message for today is "${collectiveOutputs[prop][optionIndx]}".`)
+            break
+        case "wisdom":
+            personalMessage.push(`your motivational message for today is "${collectiveOutputs[prop][optionIndx]}".`)
+            break
+        default:
+            personalMessage.push('Looks Like your all quoted Up!')
+
+    }
+  }
+
   
