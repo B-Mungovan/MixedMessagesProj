@@ -28,18 +28,18 @@ const collectiveOutputs = {
 
   let personalMessage = []
 
-  for (let prop in collectiveWisdom){
-    let optionIndx = generateRandomNumber(collectiveOutputs[prop.length])
+  for (let prop in collectiveOutputs){
+    let optionIndx = generateRandomNumber(collectiveOutputs[prop].length)
 
     switch(prop) {
-        case 'motivational':
-            personalMessage.push(`your motivational message for today is "${collectiveOutputs[prop][optionIndx]}".`)
+        case 'motivationalQuotes':
+            personalMessage.push(`your motivational messagages for today are:"${collectiveOutputs[prop][optionIndx]}".`)
             break
-        case "inspirational":
-            personalMessage.push(`your motivational message for today is "${collectiveOutputs[prop][optionIndx]}".`)
+        case "inspirationalQuotes":
+            personalMessage.push(`"${collectiveOutputs[prop][optionIndx]}".`)
             break
-        case "wisdom":
-            personalMessage.push(`your motivational message for today is "${collectiveOutputs[prop][optionIndx]}".`)
+        case "wisdomQuotes":
+            personalMessage.push(`"${collectiveOutputs[prop][optionIndx]}".`)
             break
         default:
             personalMessage.push('Looks Like your all quoted Up!')
@@ -47,4 +47,9 @@ const collectiveOutputs = {
     }
   }
 
-  
+  const formatQuotes = (quotesOfTheDay) => {
+    const formatted = quotesOfTheDay.join("\n")
+    console.log(formatted)
+  }
+
+  formatQuotes(personalMessage);
